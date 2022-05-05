@@ -1,0 +1,122 @@
+<div class="div">
+  <h1 [align]="alignment" class="pad2">This Is App Component</h1>
+</div>
+
+<div [align]="alignment" class="div bg1">
+  <h2>Employee no: {{ empno }}</h2>
+  <h2>Employee name: {{ empname }}</h2>
+  <h2>Employee age: {{ empage }}</h2>
+  <h2>Employee salary: {{ empsal }}</h2>
+  <input type="text" class="wave" [(ngModel)]="empsal" /><br /><br />
+</div>
+<div class="center bg1">
+  <button (click)="convtou()">Convert Name To Uppercase</button>
+</div>
+<br /><br /><br />
+
+<div class="center div pad fsize">
+  <input type="number" [(ngModel)]="num1" /><br />
+  <input type="number" [(ngModel)]="num2" /><br />
+  Result = {{ resl }} <br /><br />
+</div>
+<div class="center div">
+  <button class="button1" (click)="add()">+</button>
+  <button class="button1" (click)="sub()">-</button>
+  <button class="button1" (click)="mult()">*</button>
+  <button class="button1" (click)="divd()">\</button>
+</div>
+<br /><br /><br />
+
+<div class="BBd center pad" *ngIf="isPrime">
+  <h1>Big Billion Days Discount For Prime Members</h1>
+  <h3>Mobile 40%</h3>
+  <h3>TV 70%</h3>
+  <h3>Mixer Grinder 30%</h3>
+</div>
+
+<br /><br />
+
+<div class="center">
+  <table border="thick" class="center2">
+    <thead>
+      <tr>
+        <th>Employee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of marks">
+        <td>{{ m }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<br /><br />
+
+<div [ngStyle]="{ 'background-color': mycol }" class="center pad">
+  <select [(ngModel)]="dayn">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+  </select>
+</div>
+<div [ngSwitch]="dayn" [ngClass]="{ mydivcls: applymydivcls }" class="center pad">
+  <h2 *ngSwitchCase="1">Sunday</h2>
+  <h2 *ngSwitchCase="2">Monday</h2>
+  <h2 *ngSwitchCase="3">Tuesday</h2>
+  <h2 *ngSwitchCase="4">Wednesday</h2>
+  <h2 *ngSwitchCase="5">Thursday</h2>
+  <h2 *ngSwitchCase="6">Friday</h2>
+  <h2 *ngSwitchCase="7">Saturday</h2>
+  <h2 *ngSwitchDefault="0">Invalid Day No</h2>
+</div>
+<br /><br />
+
+<table class="center2" [ngStyle]="{ 'background-color': mybg, 'font-size': siz + 'px' }">
+  <thead>
+    <tr>
+      <th>Employee No</th>
+      <th>Employee Name</th>
+      <th>Employee Age</th>
+      <th *ngIf="isprs">Employee Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let m of Employee">
+      <td>{{ m.empno }}</td>
+      <td>{{ m.empname }}</td>
+      <td>{{ m.age }}</td>
+      <td *ngIf="isprs">{{ m.salary }}</td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<div class="center">
+  <select [(ngModel)]="mybg">
+    <option value="yellow">Yellow</option>
+    <option value="cyan">Cyan</option>
+    <option value="lightblue">Blue</option>
+    <option value="green">Green</option>
+    <option value="red">Red</option>
+    <option value="tomato">Tomato</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="orange">Orange</option>
+  </select>
+</div>
+<br /><br />
+<div class="center">
+  <button class="button5" (click)="hidesal()">
+    {{ isprs ? "Hide Salary" : "Unhide Salary" }}
+  </button>
+</div>
+<br /><br />
+<div class="center">
+  <button class="red" (click)="inc()">Increase Size</button>
+  <button class="green" (click)="dec()">Decrease Size</button>
+</div>
+<br> <br>
