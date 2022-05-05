@@ -1,8 +1,8 @@
 # My First Angular Project
 
-Learning and Exploring Various Data Bindings Available In Angualar, Such As
+Learning and Exploring Various Data Bindings Available In Angular, Such As
 - {{ }} Interpolation
-- [ ] Property Binding
+- [] Property Binding
 - ( ) Event Binding
 - [( )] Two Way Data Binding
 
